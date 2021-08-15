@@ -1,0 +1,39 @@
+﻿// contact
+
+names default to here(1);
+
+//all_datatables
+
+
+//first_param
+
+//mid_params
+
+
+//last_param
+
+// Cleanup the results
+//close(data table("TDAU_CH_CCF"),nosave);
+//close(data table("TDAU_CH_SA"),nosave);
+//close(data table("TestInstance"),nosave);
+//close(data table("dummy"),nosave);
+
+
+//dt_last << Sort( By(:"Time Index (ms)"), Order(Ascending), Replace Table);
+//dt_last << delete columns("Match Flag");
+
+Graph Builder(
+	Size( 1050, 921 ),
+	Variables( X( :Name( "Time Index (ms)" ) ) ),
+	Elements( Points( X, Legend( 21 ) ) )
+);
+
+DontClose = {"Datastream"};   // Example names of tables you want to leave
+
+// Loop backwards through the list, so the table numbers do not change
+For( i = N Table(), i >= 0, i--, 
+	If( Contains( DontClose, Data Table( i ) << get name ),
+		Continue(),
+		Close( Data Table( i ), "No Save" )
+	)
+);
