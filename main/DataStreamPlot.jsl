@@ -1,5 +1,6 @@
 ﻿// contact
 
+Close All( Data Tables, NoSave );
 names default to here(1);
 
 //all_datatables
