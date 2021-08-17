@@ -23,15 +23,24 @@ For Each Row(
 	 );
 
 	If( Lag( :"Event Type", 1) == "Test End" & :"Event Type" != "Test Start",
-		:"Test Instance Name" = "No Test";
+		:"Test Instance Name" = "";
 	 );  
 		
 );
 
 Graph Builder(
-	Size( 1050, 921 ),
-	Variables( X( :Name( "Time Index (ms)" ) ) ),
-	Elements( Points( X, Legend( 21 ) ) )
+	Size( 1460, 1041 ),
+	Variables(
+		X(
+			:Test Instance Name,
+			Order By(
+				:Name( "Time Index (ms)" ),
+				Ascending,
+				Order Statistic( "Mean" )
+			)
+		)
+	),
+	Elements( Line( X, Legend( 22 ) ) )
 );
 
 //delete_tables
