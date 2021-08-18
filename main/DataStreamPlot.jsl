@@ -29,7 +29,7 @@ For Each Row(
 );
 
 Graph Builder(
-	Size( 1460, 1041 ),
+	Size( 740, 1761 ),
 	Variables(
 		X(
 			:Test Instance Name,
@@ -40,7 +40,41 @@ Graph Builder(
 			)
 		)
 	),
-	Elements( Line( X, Legend( 22 ) ) )
+	Elements( Line( X, Legend( 22 ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Graph Builder",
+			OutlineBox,
+			{Set Title( "Test Instance Interactive Graph" )}
+		)
+	)
+);
+
+Graph Builder(
+	Size( 1413, 1041 ),
+	Variables(
+		X( :Name( "Time Index (ms)" ) ),
+		X(
+			:Test Instance Name,
+			Order By(
+				:Name( "Time Index (ms)" ),
+				Ascending,
+				Order Statistic( "Mean" )
+			)
+		)
+	),
+	Elements( Position( 1, 1 ), Points( X, Legend( 155 ) ) ),
+	Elements( Position( 2, 1 ), Points( X, Legend( 156 ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Graph Builder",
+			OutlineBox,
+			{Set Title( "Test Instance vs Time Interactive Graph" )}
+		),
+		Dispatch( {}, "", ScaleBox, {Format( "Fixed Dec", 12, 1 )} )
+	)
 );
 
 //delete_tables
