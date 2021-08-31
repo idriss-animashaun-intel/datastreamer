@@ -5,6 +5,7 @@ from tkinter import filedialog as fd
 from tkinter.messagebox import showinfo
 import os
 import sys
+from pathlib import Path
 
 current_directory = os.getcwd()
 
@@ -14,8 +15,8 @@ if not os.path.exists(dir):
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
-    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, relative_path)
+    path = Path(__file__).parent / relative_path
+    return str(path)
    
 
 
