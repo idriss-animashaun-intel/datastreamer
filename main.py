@@ -17,8 +17,6 @@ def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     path = Path(__file__).parent / relative_path
     return str(path)
-   
-
 
 
 def get_summary():
