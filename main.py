@@ -68,9 +68,8 @@ def get_summary():
     writing_file.write(new_file_content)
     writing_file.close()
 
-
     ### join tables
-    if len(params) > 2:
+    if len(params) > 3:
         reading_file = open(user_script, "r", encoding="utf-8-sig")
 
         new_file_content = ""
@@ -101,6 +100,33 @@ def get_summary():
         writing_file.write(new_file_content)
         writing_file.close()
     
+        reading_file = open(user_script, "r", encoding="utf-8-sig")
+
+        new_file_content = ""
+        for line in reading_file:
+            stripped_line = line.strip()
+            new_line = stripped_line.replace('//last_param', 'dt' + str(dt_count + 1) + '=dt' + str(dt_last + 1) + ' << Join(	Output Table Name("Datastream"),	With( dt' + str(len(params) - 1) + ' ),	Merge Same Name Columns, By Matching Columns( :"Time Index (ms)" = :"Time Index (ms)"),	Drop multiples( 0, 0 ),	Include Nonmatches( 1, 1 ),	Preserve main table order( 1 ));')
+            new_file_content += new_line +"\n"
+        reading_file.close()
+        writing_file = open(user_script, "w", encoding="utf-8-sig")
+        writing_file.write(new_file_content)
+        writing_file.close()
+    elif len(params) == 3:
+        dt_count =  len(params)
+        dt_last = len(params) -1
+
+        reading_file = open(user_script, "r", encoding="utf-8-sig")
+
+        new_file_content = ""
+        for line in reading_file:
+            stripped_line = line.strip()
+            new_line = stripped_line.replace('//first_param', 'dt' + str(len(params)) + '=dt0 << Join(	Output Table Name("dummy"),	With( dt1 ),	Merge Same Name Columns, By Matching Columns( :"Time Index (ms)" = :"Time Index (ms)"),	Drop multiples( 0, 0 ),	Include Nonmatches( 1, 1 ),	Preserve main table order( 1 ));')
+            new_file_content += new_line +"\n"
+        reading_file.close()
+        writing_file = open(user_script, "w", encoding="utf-8-sig")
+        writing_file.write(new_file_content)
+        writing_file.close()
+   
         reading_file = open(user_script, "r", encoding="utf-8-sig")
 
         new_file_content = ""
