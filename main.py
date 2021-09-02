@@ -4,7 +4,6 @@ from tkinter import ttk
 from tkinter import filedialog as fd
 from tkinter.messagebox import showinfo
 import os
-import sys
 from pathlib import Path
 
 current_directory = os.getcwd()
@@ -203,7 +202,7 @@ def select_file():
 
 ### Main Root
 root = Tk()
-root.title('DataStreamer v1.01')
+root.title('DataStreamer v1.02')
 
 
 mainframe = ttk.Frame(root, padding="60 50 60 50")
