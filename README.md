@@ -5,13 +5,13 @@ The Datastream plotter is a debugging tool for standing die [SD] testing on the 
 It also provides autonomous joining and plotting of data from all pins selected on the datastream. Channels such as TDAU's [Temperature readings], VCC [Power Supply voltages, currents, power draw & resistance] and Test Instances can be recorded. To use the Datastream Plotter you will need to stream to file when testing on the HDMT. Further information provided below.
 
 For example the sample Datastream output below\
-![image](uploads/87d61e99a7cbc017c022287f7e25d346/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/87d61e99a7cbc017c022287f7e25d346/image.png)
 
 This will be joined into a single JMP table & variables will be renamed appropriately\
-![image](uploads/1a36d3e194f0df0df51f68bc4055014d/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/1a36d3e194f0df0df51f68bc4055014d/image.png)
 
 An interactive JMP graph will be generated that will allow you to correlate events with test instances\
-![image](uploads/a0fce5a86b0a89d01be5c3f0630a215c/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/a0fce5a86b0a89d01be5c3f0630a215c/image.png)
 
 Note# It is advised that you save a local copy of the datastream files you wish to analyse to ensure best performance.
 
@@ -22,11 +22,11 @@ Download the tool from here: https://goto/datastreamexe
 
 #### Step 2
 Open the DataStream Plotter.exe then press "y" and enter to install tool\
-![image](uploads/58acf715b1d1704ab3bf0be4d055d86e/image.png)
-![image](uploads/d2a7038e9e203d193ef811d50da957cf/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/58acf715b1d1704ab3bf0be4d055d86e/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/d2a7038e9e203d193ef811d50da957cf/image.png)
 
 After installation there will be new folders generated in the same file location as the exe\
-![image](uploads/4529356ab4a73232073c1c9ba7e74627/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/4529356ab4a73232073c1c9ba7e74627/image.png)
 
 The Datastream Plotter will automatically open after installation\
 ![image](uploads/2e56f4eb22bbd4a2f116ee099f7584da/image.png)
