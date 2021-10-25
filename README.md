@@ -29,25 +29,25 @@ After installation there will be new folders generated in the same file location
 ![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/4529356ab4a73232073c1c9ba7e74627/image.png)
 
 The Datastream Plotter will automatically open after installation\
-![image](uploads/2e56f4eb22bbd4a2f116ee099f7584da/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/2e56f4eb22bbd4a2f116ee099f7584da/image.png)
 
 #### Step 3
 Click on the "Select DataStream Folder" and navigate to the file location where the datastream output files are stored then click select folder.
-![image](uploads/90fa86f0bb4ff1d3f0018eec3fc3c774/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/90fa86f0bb4ff1d3f0018eec3fc3c774/image.png)
 
 A pop-up window will appear the inform you of the selected folder, click ok\
-![image](uploads/a5de00618fed8a507aa4c41c7916b587/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/a5de00618fed8a507aa4c41c7916b587/image.png)
 
 #### Step 4
 Now click the "plot DataStream" button and wait for the JMP table and graph to appear [generally ~1min]
-![image](uploads/55127d459627d9f195913f9b4d98aa71/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/55127d459627d9f195913f9b4d98aa71/image.png)
 
 #### Step 5
 Using "Test Instance Interactive Graph", drag the variables of interest onto the Y axis.
-![image](uploads/6634910b285d8ef8b97b3d55d82c231d/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/6634910b285d8ef8b97b3d55d82c231d/image.png)
 
 Zoom into the area of interest and hover over points using mouse to get details
-![image](uploads/c14fa39fd014a13a42f3062da1a27350/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/c14fa39fd014a13a42f3062da1a27350/image.png)
 
 ### How to get datastream data:
 
@@ -56,26 +56,26 @@ First load and init the test program
 
 #### Step 2
 Select "DataStream" on the HDMT Site Controller
-![image](uploads/d286281d6b87eb77d182dc6a8e3fbc87/image.png)
-![image](uploads/926d0309a88382ef52ba4b7b3e2d2422/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/d286281d6b87eb77d182dc6a8e3fbc87/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/926d0309a88382ef52ba4b7b3e2d2422/image.png)
 
 #### Step 3
 Once open click select pins and select up to 10 pins you would like to monitor and click ok.
-![image](uploads/b933890c7f9a0113d0304587d04f890d/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/b933890c7f9a0113d0304587d04f890d/image.png)
 
 #### Step 4
 Now click "Stream to File" and navigate to the folder where you wish to store the data\
-![image](uploads/f04420e4085ef3a5715fe49e5eaed007/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/f04420e4085ef3a5715fe49e5eaed007/image.png)
 
 #### Step 5
 Next press start all and return to the Site Controller to begin the test
-![image](uploads/81ea42c55a94ac42376dc99e9aeb46b9/image.png)
-![image](uploads/f1dd007ca3cb8b83c2297cfdf74d65a8/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/81ea42c55a94ac42376dc99e9aeb46b9/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/f1dd007ca3cb8b83c2297cfdf74d65a8/image.png)
 
 #### Step 6
 Finally when testing has completed return to the datastream and click "Stop All"
 
-![image](uploads/1b0b8c7a32b5eb5bc395d1f4cb0af567/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/1b0b8c7a32b5eb5bc395d1f4cb0af567/image.png)
 
-![image](uploads/bf40c6ca1e4245d91e345c8fc026eee2/image.png)
+![image](https://gitlab.devtools.intel.com/ianimash/datastream-plotter/-/wikis/uploads/bf40c6ca1e4245d91e345c8fc026eee2/image.png)
 
