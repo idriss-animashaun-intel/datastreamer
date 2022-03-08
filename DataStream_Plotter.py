@@ -7,12 +7,8 @@ from subprocess import Popen
 
 
 datastream_plotter_master_directory = os.getcwd()
-datastream_plotter_directory = datastream_plotter_master_directory+"\datastream-plotter-updates"
-datastream_plotter_file = datastream_plotter_directory+"\\main.exe"
-
-datastream_plotter_old_directory = datastream_plotter_master_directory+"\\old_revisions"
-datastream_plotter_old_file = datastream_plotter_old_directory+"\\main.exe"
-
+datastream_plotter_directory = os.path.join(datastream_plotter_master_directory, "datastream-plotter-updates")
+datastream_plotter_file = os.path.join(datastream_plotter_directory, "main", "main.exe")
 
 def installation():
     print("*** Downloading new version ***")
@@ -49,9 +45,6 @@ def main(autoinstall=0):
                 updt = input("*** New upgrade available! enter <y> to upgrade now, other key to skip upgrade *** ")
                 if updt == "y": # proceed to upgrade
                     upgrade()
-    ### For the transfer between GitHub and GitLab
-    elif os.path.isfile(datastream_plotter_old_file):
-        installation()
     ### datastream_plotter wasn't installed, so we download and install it here                
     else:
         if autoinstall:
@@ -66,7 +59,8 @@ def main(autoinstall=0):
     try:
         Popen(datastream_plotter_file)
         print("*** Opening Datastream Plotter ***")
-        time.sleep(20)
+        if not autoinstall:
+            time.sleep(20)
     except:
         print('Failed to open application, Please open manually in subfolder')
         pass
