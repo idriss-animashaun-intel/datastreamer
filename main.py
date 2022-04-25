@@ -49,10 +49,10 @@ def get_summary():
 
     dt_list = ""
     for i in range(0, len(params)):
-        if params[i]== 'TDAU_CH_CCF.csv':
+        if 'TDAU' in params[i]:
             dt_list += 'dt' + str(i) + '=Open("' + folder + '\\' + params[i] + '"); :"Temperature (°C)" << Set Name( "' + params[i].strip('.csv') + ' Temperature (°C)" ); '
-        elif params[i]== 'TDAU_CH_SA.csv':
-            dt_list += 'dt' + str(i) + '=Open("' + folder + '\\' + params[i] + '"); :"Temperature (°C)" << Set Name( "' + params[i].strip('.csv') + ' Temperature (°C)" ); '
+        # elif params[i]== 'TDAU_CH_SA.csv':
+        #     dt_list += 'dt' + str(i) + '=Open("' + folder + '\\' + params[i] + '"); :"Temperature (°C)" << Set Name( "' + params[i].strip('.csv') + ' Temperature (°C)" ); '
         elif params[i]== 'TestInstance.csv':
             dt_list += 'dt' + str(i) + '=Open("' + folder + '\\' + params[i] + '"); For Each Row(:"Time Index (ms)" = :"Time Index (ms)" + 310);'
         else:
